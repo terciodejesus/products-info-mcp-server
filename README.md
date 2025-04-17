@@ -33,11 +33,13 @@ SHOPIFY_STOREFRONT_TOKEN=seu_token
 
 ## Uso
 
-Para iniciar o servidor:
+Para buildar o servidor:
 
 ```bash
-npm start
+npm run build
 ```
+
+Esse passo é muito importante para fazer com que seu servidor se conecte
 
 ## Ferramentas Disponíveis
 
@@ -48,6 +50,27 @@ Retorna informações detalhadas sobre o SuperCoffee, incluindo:
 - Descrição completa
 - Preço atual
 - Informações do fornecedor
+
+## Testando seu servidor
+
+Você precisa configurar o seu cliente LLM com o seu servidor. Segue um exemplo utilizando o Cursor.ai
+
+```
+{
+    "mcpServers": {
+        "weather": {
+            "command": "node",
+            "args": [
+                "/ABSOLUTE/PATH/TO/PARENT/FOLDER/weather/build/index.js"
+            ]
+            "env": {
+              "SHOPIFY_SHOP": "sua-loja.myshopify.com",
+              "SHOPIFY_STOREFRONT_TOKEN": "TOKEN"
+            }
+        }
+    }
+}
+```
 
 ## Estrutura do Projeto
 
