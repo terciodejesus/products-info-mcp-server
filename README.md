@@ -58,7 +58,7 @@ Você precisa configurar o seu cliente LLM com o seu servidor. Segue um exemplo 
 ```
 {
     "mcpServers": {
-        "weather": {
+        "products-info": {
             "command": "node",
             "args": [
                 "/ABSOLUTE/PATH/TO/PARENT/FOLDER/products-info/build/index.js"
